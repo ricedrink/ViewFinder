@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="878.26086956521749" y="123.88392857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Photo View Controller-->
         <scene sceneID="1nZ-X2-jEs">
             <objects>
-                <viewController id="iNz-ze-ZLY" sceneMemberID="viewController">
+                <viewController id="iNz-ze-ZLY" customClass="AddPhotoViewController" customModule="viewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rfs-QN-tCD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,9 @@
                                 <rect key="frame" x="79" y="484" width="117" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="takePhotoTapped:" destination="iNz-ze-ZLY" eventType="touchUpInside" id="knH-JM-gg7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0j-zD-qiZ">
                                 <rect key="frame" x="212" y="484" width="117" height="87"/>
@@ -83,6 +86,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Sr-E2-aO6"/>
                     </view>
+                    <connections>
+                        <outlet property="photoTaken" destination="EeJ-YG-AfK" id="cNb-xP-k1z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niS-zG-WbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
